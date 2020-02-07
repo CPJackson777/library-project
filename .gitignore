@@ -1,0 +1,3 @@
+libraryenv/
+*.pyc
+/requirements.txt

@@ -1,6 +1,7 @@
 #This import (line 2) is needed for Python classes that are modeling a database table.
 from django.db import models
 from .library import Library
+from .librarian import Librarian
 
 class Book(models.Model):
 

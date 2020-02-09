@@ -6,7 +6,7 @@ from .librarian import Librarian
 class Book(models.Model):
 
     title = models.CharField(max_length=50)
-    ISBN number = models.CharField(max_length=50)
+    ISBN_number = models.CharField(max_length=50)
     author = models.CharField(max_length=50)
     year = models.IntegerField()
     location = models.ForeignKey(Library, on_delete=models.CASCADE)

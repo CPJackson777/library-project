@@ -15,6 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from libraryapp.models import * #This is needed so that Django knows about the location of your models.
 
 urlpatterns = [
     path('admin/', admin.site.urls),

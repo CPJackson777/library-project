@@ -1,5 +1,6 @@
 #This import (line 2) is needed for Python classes that are modeling a database table.
 from django.db import models
+from .library import Library
 
 class Book(models.Model):
 
@@ -7,6 +8,8 @@ class Book(models.Model):
     ISBN number = models.CharField(max_length=50)
     author = models.CharField(max_length=50)
     year = models.IntegerField()
+    location = models.ForeignKey(Library, on_delete=models.CASCADE)
+    librarian = models.ForeignKey(Librarian, on_delete=models.CASCADE)
 
     class Meta:
         verbose_name = ("Book")

@@ -14,8 +14,12 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
+from django.urls import include, path
 from django.urls import path
+from libraryapp.models import * #This is needed so that Django knows about the location of your models.
 
+#By having each application define its own URLs, and then importing each set of those into the project, it prevents the project urls.py from becoming bloated and hard to read/maintain.
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', include('libraryapp.urls')),
 ]

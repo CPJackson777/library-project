@@ -37,7 +37,7 @@ def book_list(request):
 
                 all_books.append(book)
 
-        template = 'books/list.html'
+        template = 'books/list.html' #holding the path and filename of the template created in templates/list.html
         context = {
             'all_books': all_books
         }

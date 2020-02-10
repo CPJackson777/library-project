@@ -6,11 +6,11 @@ from .librarian import Librarian
 class Book(models.Model):
 
     title = models.CharField(max_length=50)
-    ISBN_number = models.CharField(max_length=50)
+    isbn = models.CharField(max_length=50)
     author = models.CharField(max_length=50)
-    year = models.IntegerField()
-    location = models.ForeignKey(Library, on_delete=models.CASCADE)
-    librarian = models.ForeignKey(Librarian, on_delete=models.CASCADE)
+    year_published = models.IntegerField()
+    location_id = models.ForeignKey(Library, on_delete=models.CASCADE)
+    librarian_id = models.ForeignKey(Librarian, on_delete=models.CASCADE)
 
     class Meta:
         verbose_name = ("Book")

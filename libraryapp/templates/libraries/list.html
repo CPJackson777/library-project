@@ -8,11 +8,11 @@
     <title>Library</title>
   </head>
   <body>
-    <h1>Librarians</h1>
+    <h1>Libraries</h1>
 
     <ol>
-    {% for librarian in all_librarians %}
-        <li>{{ librarian.first_name }} {{ librarian.last_name }}</li>
+    {% for library in all_libraries %}
+        <li>{{ library.title }} {{ library.address }}</li>
     {% endfor %}
     </ol>
   </body>
